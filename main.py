@@ -22,10 +22,16 @@ def main():
                 return
 
         screen.fill("black")
-        #thats the refresh, for the sprites and afterwards for the entire screen:
+
+        #here's where the event handling happens
+        player.update(dt)
+
+
+
+        #thats the refresh, for the sprites and afterwards for the entire screen. Tick = 60FPS
         player.draw(screen, "white")
         pygame.display.flip()
-        dt = clock.tick(1)/1000
+        dt = clock.tick(60)/1000
         #elihw ...end of game loop
 
 
