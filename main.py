@@ -45,6 +45,11 @@ def main():
             if asteroid.is_colliding(player):
                 print("Game over!")
                 exit()
+            for shot in shots:
+                if asteroid.is_colliding(shot):
+                    shot.kill()
+                    asteroid. split()
+
 
         #thats the refresh, for the sprites and afterwards for the entire screen. Tick = 60FPS
         for sprite in drawable:
